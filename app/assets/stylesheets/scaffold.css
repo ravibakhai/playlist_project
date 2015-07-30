@@ -70,6 +70,8 @@ div.field, div.actions {
 
 .nav_bar {
   height: 60px;
+  /*float: left;*/
+  /*width: 100%;*/
   color: #fff;
   background-color: rgba(0,0,0,.2);
   border-bottom: 1px solid #adadad;
@@ -78,6 +80,7 @@ div.field, div.actions {
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
+  z-index: -1
 }
 
 h1 {
@@ -91,12 +94,12 @@ h3 {
 .entry {
   margin: 0px auto 50px;
   float: left;
-  width: 200px;
+  width: 300px;
 }
 
 .image {
-  height: 120px;
-  width:120px;
+  height: 220px;
+  width: 220px;
   margin: 0px 40px;
 }
 
@@ -111,13 +114,13 @@ h3 {
 }
 
 .page_nav_list {
-
+  padding: 0px;
   text-align: center;
 }
 
 .page_nav_link {
   display: inline-block;
-  margin: 100px;
+  margin: 30px;
 }
 
 .clearing {

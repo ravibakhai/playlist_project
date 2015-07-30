@@ -5,10 +5,10 @@ class PlaylistsController < ApplicationController
   # GET /playlists.json
   def index
     @page = (params[:page] || 1).to_i
-    @offset = (@page - 1) * 5
+    @offset = (@page - 1) * 11
     @playlists = Playlist.
       order(created_at: :desc).
-      limit(5).
+      limit(11).
       offset(@offset).
       all
   end
