@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   resources :playlists
   get 'playlists', to: 'playlists#index', page: 1
   get 'playlists/page/:page', to: 'playlists#index'
