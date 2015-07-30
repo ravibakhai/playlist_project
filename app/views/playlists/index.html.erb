@@ -18,8 +18,10 @@
     </div>
     <p>
       <%= pluralize((playlist.votes.count-playlist.downvotes.count), "vote") %>
-      <%= button_to '+1', upvote_playlist_path(playlist), method: :post %>
-      <%= button_to '-1', downvote_playlist_path(playlist), method: :post %>
+      <div class="voters">
+        <%= button_to '/\\', upvote_playlist_path(playlist), method: :post %>
+        <%= button_to '\\/', downvote_playlist_path(playlist), method: :post %>
+      </div>
     </p>
   </div>
   <!-- <div class="more-btn-container"> -->
