@@ -29,7 +29,7 @@
   <%= @playlist.comment %>
 </p>
 
-<% if (notice == "Playlist was successfully created.") %>
+<% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
   <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
 <% end %>
 <%= link_to 'Home', playlists_path %>
