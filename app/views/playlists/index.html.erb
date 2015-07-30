@@ -17,15 +17,15 @@
   </h3>
   <div>
     <% if (playlist.image === "") %>
-      <img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> >
+      <a href=<%= "/playlists/#{playlist.id}" %>><img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
     <% else %>
-      <img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> >
+      <a href=<%= "/playlists/#{playlist.id}" %>><img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
     <% end %>
   </div>
   <!-- <div class="more-btn-container"> -->
     <!-- <a class="more-btn" href="#">More</a> -->
     <!-- <ul class="more-menu"> -->
-      <li><%= link_to 'Show', playlist %></li>
+      <!-- <li><%= link_to 'Show', playlist %></li> -->
       <!-- <li><%= link_to 'Edit', edit_playlist_path(playlist) %></li> -->
       <!-- <li><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
     <!-- </ul> -->
