@@ -2,7 +2,29 @@
 
 <h1>Listing Playlists</h1>
 
-<table>
+
+<% @playlists.each do |playlist| %>
+<div class="entry">
+  <h3 class="title">
+    <%= playlist.name %>
+  </h3>
+  <div>
+    <img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> >
+  </div>
+  <div class="more-btn-container">
+    <a class="more-btn" href="#">More</a>
+    <ul class="more-menu">
+      <li><%= link_to 'Show', playlist %></li>
+      <li><%= link_to 'Edit', edit_playlist_path(playlist) %></li>
+      <li><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+  </div>
+</div>
+<% end %>
+
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -28,7 +50,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
