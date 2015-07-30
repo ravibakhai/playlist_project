@@ -7,9 +7,9 @@
 <% end %>
 
 
-<h1>Listing Playlists</h1>
+<h1>Playlists</h1>
 
-
+<div class="entries">
 <% @playlists.each do |playlist| %>
 <div class="entry">
   <h3 class="title">
@@ -22,6 +22,7 @@
       <a href=<%= "/playlists/#{playlist.id}" %>><img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
     <% end %>
   </div>
+</div>
   <!-- <div class="more-btn-container"> -->
     <!-- <a class="more-btn" href="#">More</a> -->
     <!-- <ul class="more-menu"> -->

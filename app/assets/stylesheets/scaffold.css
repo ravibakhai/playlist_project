@@ -56,10 +56,18 @@ div.field, div.actions {
 }
 
 .nav_bar {
-  height:30px
+  height:30px;
+}
+
+h1 {
+  text-align: center;
+}
+.entries {
+  margin: auto;
 }
 
 .entry {
+  margin: 0px auto 50px;
   float: left;
   width: 200px;
 }
