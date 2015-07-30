@@ -67,6 +67,18 @@ class PlaylistsController < ApplicationController
     end
   end
 
+  def upvote
+    @playlist = Playlist.find(params[:id])
+    @playlist.votes.create
+    redirect_to(playlists_path)
+  end
+
+  def downvote
+    @playlist = Playlist.find(params[:id])
+    @playlist.downvotes.create
+    redirect_to(playlists_path)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_playlist
