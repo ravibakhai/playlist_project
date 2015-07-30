@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<% unless (@page == 1) %>
+  <%= link_to 'Previous page', page: @page - 1 %>
+<% end %>
+<% unless ((@page * @offset)>=(Playlist.all.length)) %>
+<%= link_to 'Next page', page: @page + 1 %>
+<% end %>
 
 
 <h1>Listing Playlists</h1>

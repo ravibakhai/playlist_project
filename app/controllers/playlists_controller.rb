@@ -4,7 +4,13 @@ class PlaylistsController < ApplicationController
   # GET /playlists
   # GET /playlists.json
   def index
-    @playlists = Playlist.all
+    @page = (params[:page] || 1).to_i
+    @offset = (@page - 1) * 3
+    @playlists = Playlist.
+      order(created_at: :desc).
+      limit(3).
+      offset(@offset).
+      all
   end
 
   # GET /playlists/1
