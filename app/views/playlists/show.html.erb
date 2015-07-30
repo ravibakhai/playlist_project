@@ -12,7 +12,11 @@
 
 <p>
   <strong>Image:</strong>
-  <img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> >
+  <% if (@playlist.image == "") %>
+    <img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= @playlist.name %> >
+  <% else %>
+    <img class="image" src=<%= @playlist.image %> alt:<%= @playlist.name %> >
+  <% end %>
 </p>
 
 <p>
@@ -25,5 +29,7 @@
   <%= @playlist.comment %>
 </p>
 
-<%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-<%= link_to 'Back', playlists_path %>
+<% if (notice == "Playlist was successfully created.") %>
+  <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+<% end %>
+<%= link_to 'Home', playlists_path %>

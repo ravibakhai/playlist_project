@@ -55,6 +55,15 @@ div.field, div.actions {
   list-style: square;
 }
 
+.nav_bar {
+  height:30px
+}
+
+.entry {
+  float: left;
+  width: 200px;
+}
+
 .image {
   height: 120px;
 }

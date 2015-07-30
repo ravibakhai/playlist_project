@@ -1,3 +1,3 @@
 class Playlist < ActiveRecord::Base
-  validates :url, :image, :description, :name, presence: true
+  validates :url, :description, :name, presence: true
 end
