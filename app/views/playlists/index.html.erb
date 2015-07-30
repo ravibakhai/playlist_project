@@ -1,28 +1,22 @@
 <p id="notice"><%= notice %></p>
-<% unless (@page == 1) %>
-  <%= link_to 'Previous page', page: @page - 1 %>
-<% end %>
-<% unless ((@page * @offset)>=(Playlist.all.length)) %>
-<%= link_to 'Next page', page: @page + 1 %>
-<% end %>
 
 
 <h1>Playlists</h1>
 
 <div class="entries">
-<% @playlists.each do |playlist| %>
-<div class="entry">
-  <h3 class="title">
-    <%= playlist.name %>
-  </h3>
-  <div>
-    <% if (playlist.image === "") %>
-      <a href=<%= "/playlists/#{playlist.id}" %>><img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
-    <% else %>
-      <a href=<%= "/playlists/#{playlist.id}" %>><img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
-    <% end %>
+  <% @playlists.each do |playlist| %>
+  <div class="entry">
+    <h3 class="title">
+      <%= playlist.name %>
+    </h3>
+    <div>
+      <% if (playlist.image === "") %>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
+      <% else %>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
+      <% end %>
+    </div>
   </div>
-</div>
   <!-- <div class="more-btn-container"> -->
     <!-- <a class="more-btn" href="#">More</a> -->
     <!-- <ul class="more-menu"> -->
@@ -31,10 +25,21 @@
       <!-- <li><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
     <!-- </ul> -->
   <!-- </div> -->
-</div>
 <% end %>
-
-
+</div>
+<br/>
+<div class="clearing">
+  <div class="page_nav">
+    <ul class="page_nav_list">
+      <% unless (@page == 1) %>
+        <li class="page_nav_link"><%= link_to 'Previous page', page: @page - 1 %></li>
+      <% end %>
+      <% unless ((@page * @offset)>=(Playlist.all.length)) %>
+        <li class="page_nav_link"><%= link_to 'Next page', page: @page + 1 %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <!-- <table>
   <thead>

@@ -54,16 +54,38 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+.home_link {
+  font-size: 20px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.new_link {
+  font-size: 20px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 40px;
+}
 
 .nav_bar {
-  height:30px;
+  height: 60px;
+  color: #fff;
+  background-color: rgba(0,0,0,.2);
+  border-bottom: 1px solid #adadad;
+  font-family: gotham;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
 }
 
 h1 {
   text-align: center;
 }
-.entries {
-  margin: auto;
+
+h3 {
+  text-align: center;
 }
 
 .entry {
@@ -74,4 +96,30 @@ h1 {
 
 .image {
   height: 120px;
+  width:120px;
+  margin: 0px 40px;
+}
+
+.image_link:hover {
+  background-color: transparent;
+}
+
+.page_nav {
+  margin: 0px ;
+  /*background: green;*/
+  /*text_align: center;*/
+}
+
+.page_nav_list {
+
+  text-align: center;
+}
+
+.page_nav_link {
+  display: inline-block;
+  margin: 100px;
+}
+
+.clearing {
+  clear: both;
 }
