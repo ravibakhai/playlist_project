@@ -1,0 +1,13 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+
+body {
+  background: url(http://wallpoper.com/images/00/32/34/22/music-record_00323422.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
