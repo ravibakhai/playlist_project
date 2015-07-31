@@ -28,20 +28,20 @@
   <strong>Comment:</strong>
   <%= @playlist.comment %>
 </p> -->
-
+<div class="comment">
+  <h3 class="new_review_head">New Review</h3>  
+</div>
+<%= render 'reviews/form' %>
 
 <h3>Reviews:</h3>
 
 <% @playlist.reviews.each do |review| %>
-  <p class="comment show_sections">
+  <div class="comment show_sections">
     <%= review.comment %>
     <br>
-    Added on: <%= review.created_at %>
-  </p>
+    <p class="timestamp">Added on: <%= review.created_at %></p>
+  </div>
 <% end %>
-
-<h3>New Review</h3>
-<%= render 'reviews/form' %>
 
 <div class="home_and_edit">
   <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>

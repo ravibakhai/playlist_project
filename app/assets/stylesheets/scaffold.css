@@ -219,3 +219,32 @@ input[type="submit"]:nth-child(1) {
   margin-top: 60px;
   text-align: center;
 }
+
+div.comment {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timestamp {
+  text-align: right;
+  font-size: 10px;
+  font-style: italic;
+  margin: 0px;
+}
+
+.comment_field .comment_actions {
+  width:360px;
+}
+
+.new_review_head {
+  text-align: left;
+}
+
+.new_review {
+  width:360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#review_comment {
+  width: 360px;
+}
