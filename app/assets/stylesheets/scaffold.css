@@ -69,8 +69,20 @@ div.field, div.actions {
   font-size: 20px;
   float: right;
   margin-top: 20px;
-  margin-right: 40px;
+  margin-right: 25em;
 }
+
+.soundbaselogo {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  float: right;
+
+}
+
+/*.soundbaselogo:hover {
+  color: gold;
+}*/
 
 .nav_bar {
   height: 60px;

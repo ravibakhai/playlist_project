@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :playlists do
     member do
       post 'upvote'
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
   end
   get 'playlists', to: 'playlists#index', page: 1
   get 'playlists/page/:page', to: 'playlists#index'
+
+  root to: 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
