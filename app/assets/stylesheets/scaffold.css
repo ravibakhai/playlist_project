@@ -99,7 +99,7 @@ div.field, div.actions {
   z-index: -1;
 }
 
-.description {
+.description, .comment {
   width: 360px;
   text-align: left;
 }

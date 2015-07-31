@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20150730212558) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "playlist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id"
+
   create_table "votes", force: :cascade do |t|
     t.integer  "playlist_id"
     t.datetime "created_at",  null: false

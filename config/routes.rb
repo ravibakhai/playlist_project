@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
+  get 'reviews', to: 'reviews#index'
+  post 'reviews', to: 'reviews#create'
+
   resources :playlists do
     member do
       post 'upvote'
