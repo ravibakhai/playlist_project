@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150730212558) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "downvotes", force: :cascade do |t|
     t.integer  "playlist_id"
     t.datetime "created_at",  null: false
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150730212558) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id"
+  add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id", using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "playlist_id"
@@ -44,4 +47,5 @@ ActiveRecord::Schema.define(version: 20150730212558) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "reviews", "playlists"
 end
