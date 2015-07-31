@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :reviews
+  get 'reviews', to: 'reviews#index'
+  post 'reviews', to: 'reviews#create'
   resources :playlists do
     member do
       post 'upvote'

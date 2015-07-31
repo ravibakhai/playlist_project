@@ -19,6 +19,10 @@ class PlaylistsController < ApplicationController
     @review = Review.new
   end
 
+  def confirmation
+    @review = Review.new
+  end
+
   # GET /playlists/new
   def new
     @playlist = Playlist.new

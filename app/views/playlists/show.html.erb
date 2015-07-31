@@ -24,16 +24,16 @@
   <%= @playlist.description %>
 </p>
 
-<p class="show_sections">
+<!-- <p class="show_sections">
   <strong>Comment:</strong>
   <%= @playlist.comment %>
-</p>
+</p> -->
 
 
-<h3>Review</h3>
+<h3>Reviews:</h3>
 
 <% @playlist.reviews.each do |review| %>
-  <p>
+  <p class="comment show_sections">
     <%= review.comment %>
     <br>
     Added on: <%= review.created_at %>
@@ -44,9 +44,9 @@
 <%= render 'reviews/form' %>
 
 <div class="home_and_edit">
-  <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
+  <!-- <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
     <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
     <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <% end %>
+  <% end %> -->
   <%= link_to 'Home', playlists_path %>
 </div>

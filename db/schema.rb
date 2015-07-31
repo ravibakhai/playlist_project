@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20150730212558) do
 
   create_table "downvotes", force: :cascade do |t|
@@ -19,7 +18,6 @@ ActiveRecord::Schema.define(version: 20150730212558) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
 
   create_table "playlists", force: :cascade do |t|
     t.string   "name"
@@ -33,16 +31,17 @@ ActiveRecord::Schema.define(version: 20150730212558) do
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "votes", force: :cascade do |t|
     t.integer  "playlist_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id"
+
+  create_table "votes", force: :cascade do |t|
+    t.integer  "playlist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end
