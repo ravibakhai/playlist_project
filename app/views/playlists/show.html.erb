@@ -15,14 +15,16 @@
 </p>
 
 <p class="show_sections">
-  <strong>Playlist Url:</strong>
+  <strong>Playlist URL:</strong>
   <a href=<%= @playlist.url %>><%= (@playlist.url).truncate(43) %></a>
 </p>
 
-<p class="description show_sections">
-  <strong>Description:</strong>
-  <%= @playlist.description %>
-</p>
+<% if !(@playlist.description == "") %>
+  <p class="description show_sections">
+      <strong>Description:</strong>
+      <%= @playlist.description %>
+  </p>
+<% end %>
 
 <!-- <p class="show_sections">
   <strong>Comment:</strong>
