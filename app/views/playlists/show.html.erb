@@ -44,9 +44,9 @@
 <%= render 'reviews/form' %>
 
 <div class="home_and_edit">
-  <!-- <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
+  <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
     <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
     <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <% end %> -->
+  <% end %>
   <%= link_to 'Home', playlists_path %>
 </div>

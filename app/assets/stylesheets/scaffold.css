@@ -58,25 +58,55 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
 .home_link {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
   font-size: 20px;
-  float: left;
+  /*float: left;*/
   margin-top: 20px;
-  margin-left: 40px;
+  /*margin-left: 40px;*/
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .new_link {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
   font-size: 20px;
-  float: right;
+  text-align: right;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 20px;
-  margin-right: 25em;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
 }
 
 .soundbaselogo {
+  display: inline-block;
+  width: 30%;
+  position:relative;
+  left: 5%;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: 20px;
-  float: right;
+  /*float: right;*/
 
 }
 
@@ -160,6 +190,7 @@ input[type="submit"]:nth-child(1) {
 
 .page_nav {
   margin: 0px ;
+  /*width: 100%;*/
   /*background: green;*/
   /*text_align: center;*/
 }
@@ -170,8 +201,14 @@ input[type="submit"]:nth-child(1) {
 }
 
 .page_nav_link {
+  float: none;
+  width: 95px;
   display: inline-block;
-  margin: 30px;
+  margin: 30px 10px;
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  box-shadow: none;
 }
 
 .clearing {

@@ -5,10 +5,10 @@ class PlaylistsController < ApplicationController
   # GET /playlists.json
   def index
     @page = (params[:page] || 1).to_i
-    @offset = (@page - 1) * 11
+    @offset = (@page - 1) * 6
     @playlists = Playlist.
       order(created_at: :desc).
-      limit(11).
+      limit(6).
       offset(@offset).
       all
   end
@@ -40,7 +40,7 @@ class PlaylistsController < ApplicationController
     respond_to do |format|
       if @playlist.save
         format.html { redirect_to @playlist, notice: 'Playlist was successfully created.' }
-        format.json { render :show, status: :created, location: @playlist }
+        format.json { render :confirmation, status: :created, location: @playlist }
       else
         format.html { render :new }
         format.json { render json: @playlist.errors, status: :unprocessable_entity }
@@ -54,7 +54,7 @@ class PlaylistsController < ApplicationController
     respond_to do |format|
       if @playlist.update(playlist_params)
         format.html { redirect_to @playlist, notice: 'Playlist was successfully updated.' }
-        format.json { render :show, status: :ok, location: @playlist }
+        format.json { render :confirmation, status: :ok, location: @playlist }
       else
         format.html { render :edit }
         format.json { render json: @playlist.errors, status: :unprocessable_entity }
