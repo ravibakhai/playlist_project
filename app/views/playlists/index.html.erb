@@ -11,11 +11,18 @@
     </h3>
     <div>
       <% if (playlist.image === "") %>
-        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
       <% else %>
-        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
       <% end %>
     </div>
+    <p>
+      <%= pluralize((playlist.votes.count-playlist.downvotes.count), "vote") %>
+      <div class="voters">
+        <%= button_to '/\\', upvote_playlist_path(playlist), method: :post %>
+        <%= button_to '\\/', downvote_playlist_path(playlist), method: :post %>
+      </div>
+    </p>
   </div>
   <!-- <div class="more-btn-container"> -->
     <!-- <a class="more-btn" href="#">More</a> -->
@@ -39,7 +46,11 @@
       <% end %>
     </ul>
   </div>
+
 </div>
+
+
+
 
 <!-- <table>
   <thead>

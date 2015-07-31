@@ -1,7 +1,7 @@
 body { background-color: #fff; color: #F9EDB4; }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: gotham, verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
 }
@@ -18,6 +18,10 @@ a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
   margin-bottom: 10px;
+  width: 150px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #notice {
@@ -80,7 +84,12 @@ div.field, div.actions {
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
-  z-index: -1
+  z-index: -1;
+}
+
+.description {
+  width: 360px;
+  text-align: left;
 }
 
 h1 {
@@ -97,10 +106,40 @@ h3 {
   width: 300px;
 }
 
-.image {
+p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.voters {
+  margin-left: auto;
+  margin-right: auto;
+  width: 18px;
+}
+
+input[type="submit"]:nth-child(1) {
+  /*background-color: turquoise;*/
+}
+
+.show_sections {
+  margin-bottom: 50px;
+}
+
+.home_and_edit {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.image_home {
   height: 220px;
   width: 220px;
   margin: 0px 40px;
+}
+
+.image_show {
+  height: 400px;
+  width: 400px;
 }
 
 .image_link:hover {
@@ -125,4 +164,9 @@ h3 {
 
 .clearing {
   clear: both;
+}
+
+.new_back {
+  margin-top: 60px;
+  text-align: center;
 }

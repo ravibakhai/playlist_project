@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   resources :reviews
-  resources :playlists
+  resources :playlists do
+    member do
+      post 'upvote'
+    end
+  end
+
+  resources :playlists do
+    member do
+      post 'downvote'
+    end
+  end
   get 'playlists', to: 'playlists#index', page: 1
   get 'playlists/page/:page', to: 'playlists#index'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,33 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="show_sections">
   <strong>Name:</strong>
   <%= @playlist.name %>
 </p>
 
-<p>
+<p class="show_sections">
+  <!-- <strong>Image:</strong> -->
+  <% if (@playlist.image == "") %>
+    <img class="image_show" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= @playlist.name %> >
+  <% else %>
+    <img class="image_show" src=<%= @playlist.image %> alt:<%= @playlist.name %> >
+  <% end %>
+</p>
+
+<p class="show_sections">
   <strong>Url:</strong>
   <a href=<%= @playlist.url %>><%= @playlist.url %></a>
 </p>
 
-<p>
-  <!-- <strong>Image:</strong> -->
-  <% if (@playlist.image == "") %>
-    <img class="image" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= @playlist.name %> >
-  <% else %>
-    <img class="image" src=<%= @playlist.image %> alt:<%= @playlist.name %> >
-  <% end %>
-</p>
-
-<p>
+<p class="description show_sections">
   <strong>Description:</strong>
   <%= @playlist.description %>
 </p>
 
-<p>
+<p class="show_sections">
   <strong>Comment:</strong>
   <%= @playlist.comment %>
 </p>
+
 
 <h3>Review</h3>
 
@@ -42,8 +43,10 @@
 <h3>New Review</h3>
 <%= render 'reviews/form' %>
 
-<% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
-  <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-<% end %>
-<%= link_to 'Home', playlists_path %>
-
+<div class="home_and_edit">
+  <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
+    <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+    <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <% end %>
+  <%= link_to 'Home', playlists_path %>
+</div>
