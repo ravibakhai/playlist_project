@@ -15,8 +15,8 @@
 </p>
 
 <p class="show_sections">
-  <strong>Url:</strong>
-  <a href=<%= @playlist.url %>><%= @playlist.url %></a>
+  <strong>Playlist Url:</strong>
+  <a href=<%= @playlist.url %>><%= (@playlist.url).truncate(43) %></a>
 </p>
 
 <p class="description show_sections">
