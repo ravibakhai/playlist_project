@@ -1,5 +1,5 @@
 class PlaylistsController < ApplicationController
-  before_action :set_playlist, only: [:show, :edit, :update, :destroy]
+  before_action :set_playlist, only: [:show, :confirmation, :edit, :update, :destroy]
 
   # GET /playlists
   # GET /playlists.json
@@ -39,8 +39,8 @@ class PlaylistsController < ApplicationController
 
     respond_to do |format|
       if @playlist.save
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully created.' }
-        format.json { render :confirmation, status: :created, location: @playlist }
+        format.html { redirect_to confirmation_playlist_path(@playlist), notice: 'Playlist was successfully created.' }
+        format.json { render :show, status: :created, location: @playlist }
       else
         format.html { render :new }
         format.json { render json: @playlist.errors, status: :unprocessable_entity }
@@ -53,8 +53,8 @@ class PlaylistsController < ApplicationController
   def update
     respond_to do |format|
       if @playlist.update(playlist_params)
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully updated.' }
-        format.json { render :confirmation, status: :ok, location: @playlist }
+        format.html { redirect_to confirmation_playlist_path(@playlist), notice: 'Playlist was successfully updated.' }
+        format.json { render :show, status: :ok, location: @playlist }
       else
         format.html { render :edit }
         format.json { render json: @playlist.errors, status: :unprocessable_entity }

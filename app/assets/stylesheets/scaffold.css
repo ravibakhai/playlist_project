@@ -170,6 +170,7 @@ input[type="submit"]:nth-child(1) {
 
 .home_and_edit {
   margin-top: 60px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -247,4 +248,8 @@ div.comment {
 }
 #review_comment {
   width: 360px;
+}
+
+.empty_space {
+  height: 100px;
 }

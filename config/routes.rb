@@ -7,12 +7,8 @@ Rails.application.routes.draw do
   resources :playlists do
     member do
       post 'upvote'
-    end
-  end
-
-  resources :playlists do
-    member do
       post 'downvote'
+      get 'confirmation'
     end
   end
   get 'playlists', to: 'playlists#index', page: 1
