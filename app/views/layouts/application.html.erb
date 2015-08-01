@@ -7,14 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="nav_bar">
-    <span class="home_link">
-      <%= link_to 'Home', playlists_path %>
-    </span>
-    <span class="new_link">
+  <ul class="nav_bar">
+    <li class="soundbaselogo">
+      <%= link_to 'SoundBass', welcome_index_path %>
+    </li>
+    <li class="home_link">
+      <%= link_to 'Feed', playlists_path %>
+    </li>
+    <li class="new_link">
       <%= link_to 'New Playlist', new_playlist_path %>
-    </span>
-  </div>
+    </li>
+  </ul>
 
 <%= yield %>
 

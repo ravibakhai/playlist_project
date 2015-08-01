@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p class="comment show_sections">
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<p class="show_sections">
+  <strong>Playlist:</strong>
+  <%= @review.playlist.name %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+
+<%= link_to 'Back', @review.playlist %>

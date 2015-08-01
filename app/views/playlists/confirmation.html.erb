@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h2 class="show_sections">
+<p class="show_sections">
+  <strong>This is your last chance to edit or destroy this playlist!</strong>
+</p>
+
+<p class="show_sections">
+  <strong>Name:</strong>
   <%= @playlist.name %>
-</h2>
+</p>
 
 <p class="show_sections">
   <!-- <strong>Image:</strong> -->
@@ -15,7 +20,7 @@
 
 <p class="show_sections">
   <strong>Playlist URL:</strong>
-  <a href=<%= @playlist.url %>><%= (@playlist.url).truncate(43) %></a>
+  <a href=<%= @playlist.url %>><%= @playlist.url %></a>
 </p>
 
 <% if !(@playlist.description == "") %>
@@ -45,9 +50,7 @@
 <% end %>
 
 <div class="home_and_edit">
-  <!-- <% if (notice == "Playlist was successfully created.") || (notice == "Playlist was successfully updated.") %>
-    <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
-    <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <% end %> -->
+  <%= link_to 'Edit', edit_playlist_path(@playlist) %> |
+  <%= link_to 'Destroy', @playlist, method: :delete, data: { confirm: 'Are you sure?' } %> |
   <%= link_to 'Home', playlists_path %>
 </div>

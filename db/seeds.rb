@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Playlist.create(name: "Some playlist", description: "Some description", url: "http://example.com")
+Playlist.create(name: "Some playlist 2", description: "Some description", url: "http://example.com")
+Playlist.create(name: "Some playlist 3", description: "Some description", url: "http://example.com")
