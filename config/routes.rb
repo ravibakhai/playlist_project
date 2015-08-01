@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
-  get 'users/new'
+
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
 
   get 'welcome/index'
 
   get 'reviews', to: 'reviews#index'
   post 'reviews', to: 'reviews#create'
-
+  resources :users
   resources :playlists do
     member do
       post 'upvote'
