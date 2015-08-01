@@ -247,5 +247,9 @@ div.comment {
 }
 
 .empty_space {
-  height: 150px;
+  height: 100px;
+}
+
+.entries {
+  margin-left: 8em;
 }

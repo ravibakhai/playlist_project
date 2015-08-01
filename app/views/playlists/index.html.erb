@@ -7,7 +7,7 @@
   <% @playlists.each do |playlist| %>
   <div class="entry">
     <h3 class="title">
-      <%= (playlist.name).truncate(26) %>
+      <%= playlist.name %>
     </h3>
     <div>
       <% if (playlist.image === "") %>
