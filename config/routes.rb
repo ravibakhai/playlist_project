@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get "/log-in" => "sessions#new"
+  post "/log-in" => "sessions#create"
+  get "/log-out" => "sessions#destroy", as: :log_out
+
   get 'reviews', to: 'reviews#index'
   post 'reviews', to: 'reviews#create'
   resources :users
