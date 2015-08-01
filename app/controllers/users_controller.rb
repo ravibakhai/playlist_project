@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
         flash[:notice] = "Welcome to SoundBass!"
-        redirect_to "/"
+        redirect_to "/playlists"
       else
         flash[:alert] = "There was a problem creating your account. Please try again."
         redirect_to :back
