@@ -1,7 +1,19 @@
+<ul class="nav_bar">
+  <li class="soundbaselogo">
+    <%= link_to 'SoundBass', welcome_index_path %>
+  </li>
+  <li class="home_link">
+    <%= link_to 'Feed', playlists_path %>
+  </li>
+  <li class="new_link">
+    <%= link_to 'New Playlist', new_playlist_path %>
+  </li>
+  <li class="logout">
+    <%= link_to 'Log Out', log_out_path %>
+</ul>
 <p id="notice"><%= notice %></p>
-
-
 <h1>Feed</h1>
+
 
 <div class="entries">
   <% @playlists.each do |playlist| %>

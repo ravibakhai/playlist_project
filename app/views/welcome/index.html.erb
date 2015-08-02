@@ -1,12 +1,31 @@
+<ul class="nav_bar">
+  <li class="soundbaselogo">
+    <%= link_to 'SoundBass', welcome_index_path %>
+  </li>
+  <li class="home_link">
+    <%= link_to 'Feed', playlists_path %>
+  </li>
+  <li class="new_link">
+    <%= link_to 'New Playlist', new_playlist_path %>
+  </li>
+  <li class="login">
+    <%= link_to 'Log In', log_in_path %>
+  </li>
+
+</ul>
 <body class = "soundbaseimage">
 <h1 class= "soundbase">SoundBass</h1>
 <!-- <h2 class = "welcome">Welcome!</h2> -->
+<div>
+<h2 class = "signupmaster">
+  <% link_to 'Sign Up', new_user_path %>
+</h2>
+</div>
 <div class = "blurbmaster">
 <p class = "blurb">Share Your Favorite Playlists</p>
 <p class = "blurb2">Listen to the World's Sounds</p>
 <p class = "blurb3">Discover New Tracks</p>
 </div>
-
 
 <div class='musico'>
   <ul>
@@ -21,3 +40,21 @@
 <br>
 </div>
 </body>
+
+<ul class="nav_bar">
+  <li class="soundbaselogo">
+    <%= link_to 'SoundBass', welcome_index_path %>
+  </li>
+  <li class="home_link">
+    <%= link_to 'Feed', playlists_path %>
+  </li>
+  <li class="new_link">
+    <%= link_to 'New Playlist', new_playlist_path %>
+  </li>
+  <li class="login">
+    <%= link_to 'Log In', log_in_path %>
+  </li>
+  <li class="signup">
+    <%= link_to 'Sign Up', new_user_path %>
+  </li>
+</ul>

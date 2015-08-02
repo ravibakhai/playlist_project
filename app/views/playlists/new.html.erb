@@ -1,3 +1,17 @@
+<ul class="nav_bar">
+  <li class="soundbaselogo">
+    <%= link_to 'SoundBass', welcome_index_path %>
+  </li>
+  <li class="home_link">
+    <%= link_to 'Feed', playlists_path %>
+  </li>
+  <li class="new_link">
+    <%= link_to 'New Playlist', new_playlist_path %>
+  </li>
+  <li class="logout">
+    <%= link_to 'Log Out', log_out_path %>
+</ul>
+
 <h1>New Playlist</h1>
 
 <%= render 'form' %>
