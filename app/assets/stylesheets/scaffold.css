@@ -12,7 +12,7 @@ pre {
   font-size: 11px;
 }
 
-/*a { color: #18D8F0; }*/
+a { color: white; }
 a:visited { color: white; }
 a:hover { color: #F9EDB4;  }
 
