@@ -11,3 +11,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.logout {
+  float:right;
+  margin-right: 2em;
+  font-size: 12px;
+  
+}
