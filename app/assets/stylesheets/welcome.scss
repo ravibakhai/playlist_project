@@ -3,7 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .signupmaster {
-  margin-top: 8em;
+    margin-top: -2em;
+    font-size: 16px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 8px;
+    background: #1EACC7;
+    font-color: white;
+    opacity: 1;
+}
+
+.facebooklogin {
+  // width: 240px;
+  text-align: center;
+
+}
+  ._4z_f {
+    width: 240px;
+  }
+.loginmaster {
+  font-size: 16px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 8px;
+  background: black;
+  font-color: white;
+  opacity: .6;
 }
 .soundbaseimage {
   background: url(http://i.ytimg.com/vi/Bejcupm7VpU/maxresdefault.jpg);
@@ -36,7 +63,7 @@
 }
 
 .blurbmaster {
-  margin-top: 10em;
+  margin-top: 6em;
   color: #18D8F0;
 }
 

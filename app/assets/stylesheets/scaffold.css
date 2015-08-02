@@ -12,9 +12,9 @@ pre {
   font-size: 11px;
 }
 
-a { color: #18D8F0; }
-a:visited { color: #18D8F0; }
-a:hover { color: #fff; background-color:#000; }
+/*a { color: #18D8F0; }*/
+a:visited { color: white; }
+a:hover { color: #F9EDB4;  }
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -247,7 +247,7 @@ div.comment {
 }
 
 .empty_space {
-  height: 100px;
+  height: 120px;
 }
 
 .entries {

@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get 'playlists/page/:page', to: 'playlists#index'
 
   root to: 'welcome#index'
+
+    get 'facebook/token'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
