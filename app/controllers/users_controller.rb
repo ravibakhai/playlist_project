@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
-        flash[:notice] = "Welcome to SoundBass!"
+        flash[:notice] = "Welcome to SoundBase!"
         redirect_to "/playlists"
       else
         flash[:alert] = "There was a problem creating your account. Please try again."
