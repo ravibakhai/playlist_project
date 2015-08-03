@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'welcome/index'
 
   get 'reviews', to: 'reviews#index'
@@ -7,21 +8,27 @@ Rails.application.routes.draw do
 
 
 
-  get 'sessions/new'
+  # get 'sessions/new'
+  #
+  # get 'sessions/create'
+  #
+  # get 'sessions/destroy'
+  #
+  # get 'welcome/index'
 
-  get 'sessions/create'
 
-  get 'sessions/destroy'
+  #
+  # get "/log-in" => "devise/sessions#new"
+  # post "/log-in" => "devise/sessions#create"
+  # get "/log-out" => "devise/sessions#destroy", as: :log_out
 
-  get 'welcome/index'
 
-  get "/log-in" => "sessions#new"
-  post "/log-in" => "sessions#create"
-  get "/log-out" => "sessions#destroy", as: :log_out
 
-  get 'reviews', to: 'reviews#index'
-  post 'reviews', to: 'reviews#create'
-  resources :users
+  #
+  #
+  # get 'reviews', to: 'reviews#index'
+  # post 'reviews', to: 'reviews#create'
+
   resources :playlists do
     member do
       post 'upvote'
@@ -35,7 +42,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
 
 
-    get 'facebook/token'
+  get 'facebook/token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
