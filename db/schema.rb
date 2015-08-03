@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20150801144957) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "downvotes", force: :cascade do |t|
     t.integer  "playlist_id"
     t.datetime "created_at",  null: false
@@ -41,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150801144957) do
 
   add_index "reviews", ["playlist_id"], name: "index_reviews_on_playlist_id", using: :btree
 
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_hash"
@@ -48,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150801144957) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
 
   create_table "votes", force: :cascade do |t|
     t.integer  "playlist_id"

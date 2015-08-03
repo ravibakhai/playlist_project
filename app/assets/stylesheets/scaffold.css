@@ -247,9 +247,17 @@ div.comment {
 }
 
 .empty_space {
+
   height: 120px;
 }
 
 .entries {
   /*margin-left: 8em;*/
+
+  height: 100px;
 }
+
+/*.entries {
+  margin-left: 8em;
+
+}*/
