@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  # devise_for :users
   get 'welcome/index'
 
   get 'reviews', to: 'reviews#index'
   post 'reviews', to: 'reviews#create'
 
-  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
 
   # get 'sessions/new'
   #
