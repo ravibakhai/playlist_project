@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'reviews', to: 'reviews#index'
   post 'reviews', to: 'reviews#create'
 
-
+  
 
   # get 'sessions/new'
   #
