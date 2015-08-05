@@ -1,28 +1,18 @@
-
-
 <body class = "soundbaseimage">
 <h1 class= "soundbase">SoundBase</h1>
-<!-- <h2 class = "welcome">Welcome!</h2> -->
+
 <div>
 <h2 class = "signupmaster">
 <%= link_to 'Sign Up', new_user_registration_path %>
 </h2>
-<!-- </div>
-<div class="facebooklogin">
-<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();" data-auto-logout-link="true">
-</fb:login-button>
-<div id="status">
-</div> -->
-<!-- </div>
-<%= link_to 'Token Transfer', facebook_token_path, id: 'token-transfer-link' %>
-</div> -->
+
 <div>
 <h2 class = "loginmaster">
 <%= link_to 'Log In', new_user_session_path %>
 </h2>
-
+<div class = "facebooklogin">
 <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-
+</div>
 <div class = "blurbmaster">
 <p class = "blurb">Share Your Favorite Playlists</p>
 <p class = "blurb2">Listen to the World's Sounds</p>
