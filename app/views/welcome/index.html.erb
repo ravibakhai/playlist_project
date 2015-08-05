@@ -8,11 +8,21 @@
 
 <div>
 <h2 class = "loginmaster">
-<%= link_to 'Log In', new_user_session_path %>
+<% if current_user.nil? %>
+  <%= link_to 'Log In', new_user_session_path %>
+<% else %>
+  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+<% end %>
+
 </h2>
 <div class = "facebooklogin">
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-</div>
+<%#= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+  <% if current_user.nil? %>
+    <%= link_to user_omniauth_authorize_path(:facebook) do %>
+    <%= image_tag ('facebooklogin.png') %>
+  <%end%>
+<% end %>
+
 <div class = "blurbmaster">
 <p class = "blurb">Share Your Favorite Playlists</p>
 <p class = "blurb2">Listen to the World's Sounds</p>
