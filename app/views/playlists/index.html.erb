@@ -9,7 +9,7 @@
     </h3>
     <div>
       <% if (playlist.image === "") %>
-        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src='http://www.wpclipart.com/signs_symbol/arrows/button_arrows/play_buttons/play_button.svg' alt:<%= playlist.name %> ></a>
+        <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src='http://www.ketlis.com/images/blue_play_button.png' alt:<%= playlist.name %> ></a>
       <% else %>
         <a class="image_link" href=<%= "/playlists/#{playlist.id}" %>><img class="image_home" src=<%= playlist.image %> alt:<%= playlist.name %> ></a>
       <% end %>
