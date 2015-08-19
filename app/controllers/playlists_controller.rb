@@ -36,7 +36,7 @@ class PlaylistsController < ApplicationController
   # POST /playlists.json
   def create
     @playlist = Playlist.new(playlist_params)
-
+    @playlist.user = current_user
     respond_to do |format|
       if @playlist.save
         format.html { redirect_to confirmation_playlist_path(@playlist), notice: 'Playlist was successfully created.' }

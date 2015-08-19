@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804211619) do
+ActiveRecord::Schema.define(version: 20150819020858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,19 @@ ActiveRecord::Schema.define(version: 20150804211619) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "follows", force: :cascade do |t|
+    t.integer  "followable_id",                   null: false
+    t.string   "followable_type",                 null: false
+    t.integer  "follower_id",                     null: false
+    t.string   "follower_type",                   null: false
+    t.boolean  "blocked",         default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
+
   create_table "playlists", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
@@ -30,7 +43,10 @@ ActiveRecord::Schema.define(version: 20150804211619) do
     t.text     "comment"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
+
+  add_index "playlists", ["user_id"], name: "index_playlists_on_user_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
@@ -58,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150804211619) do
     t.inet     "last_sign_in_ip"
     t.string   "provider"
     t.string   "uid"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -69,5 +86,6 @@ ActiveRecord::Schema.define(version: 20150804211619) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "playlists", "users"
   add_foreign_key "reviews", "playlists"
 end
